@@ -1,0 +1,28 @@
+.services_section{
+    background-color: black;
+    margin: 2.5% 5%;
+    color: white;
+    padding: 30px 0;
+}
+
+.services_section .heading h2{
+    text-align: left;
+    margin-left: 5%;
+    font-size: 30px;
+}
+
+.services_info {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto multiple lines */
+    justify-content: center; /* Centers items horizontally */
+    gap: 20px; /* Adds some spacing between items */
+}
+
+.services_individual_info {
+    flex-basis: calc(33.333% - 40px); /* Each item takes approximately one-third of the container width minus the padding around images */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 0;
+}

@@ -1,0 +1,28 @@
+.products_section {
+    background-color: black;
+    color: white;
+    margin: 0 5%;
+    padding: 30px 0;
+}
+
+.products_section h2 {
+    font-size: 30px;
+    text-align: left;
+    margin-left: 5%;
+}
+
+.products_section p {
+    font-size: large;
+}
+
+.products_section .paragraph {
+    width: 70%;
+    margin: 0 auto; /* Center the paragraph within the section */
+}
+
+.coming-soon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

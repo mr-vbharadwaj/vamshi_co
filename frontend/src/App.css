@@ -1,0 +1,16 @@
+body {
+  text-align: center;
+  background-color: #1e2026;
+  overflow-x: hidden;
+  font-family: "futura_m";
+}
+
+/* @keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+

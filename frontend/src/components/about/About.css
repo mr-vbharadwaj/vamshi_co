@@ -1,0 +1,58 @@
+.about_section {
+    background-color: black;
+    margin: 0 5%;
+    color: white;
+    padding: 30px 0;
+    height: 130vh;
+}
+
+.about_heading h2 {
+    text-align: left;
+    font-size: 30px;
+    margin-left: 5%;
+}
+
+.about_section p {
+    font-size: 20px;
+    margin-left: -4%;
+}
+
+.meet_section {
+    background-color: #282c34;
+    padding: 10px 40px;
+    margin: 5% 10%;
+}
+
+.meet_section h3{
+    font-size: 24px;
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto multiple lines */
+    justify-content: center; /* Centers items horizontally */
+    gap: 20px; /* Adds some spacing between items */
+}
+
+.individual_info {
+    flex-basis: calc(33.333% - 40px); /* Each item takes approximately one-third of the container width minus the padding around images */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.info img {
+    padding: 10px 50px;
+}
+
+.info p {
+    font-size: 18px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+   .individual_info {
+        flex-basis: calc(50% - 40px); /* On smaller screens, items take half the container width minus the padding */
+    }
+}
