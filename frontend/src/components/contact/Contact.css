@@ -1,0 +1,243 @@
+.contact-section {
+    color: white;
+    background-color: black;
+    margin: 2% 5%;
+    padding: 30px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+.contact-section{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.contact-section.loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.locate-us{
+    margin: 80px 38%;
+    padding-top: 1px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    background-color: #1e2026;
+}
+
+.locate-us a{
+    color: white;
+}
+
+.locate-us a:hover{
+    color: rgb(0, 204, 255);
+}
+
+.contact-section .locate-us h2{
+    text-align: center;
+    margin-left: 0;
+}
+
+.contact-section .locate-us p{
+    text-align: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e2026;
+    padding: 40px 0;
+    margin: 0 10%;
+    border-radius: 8px;
+    margin-left: 25%;
+    gap: 30px;
+    max-width: 800px;
+}
+
+.field-container {
+    display: flex;
+    align-items: center; /* Centers items vertically */
+    gap: 30px; /* Adjust spacing between label and input */
+}
+
+.field-container label {
+    font-size: 18px;
+    padding: 0;
+    color: #ccc;
+}
+
+.field-container input,.field-container textarea {
+    border-radius: 4px;
+    max-width: 400px;
+    border: 1px solid #282c34;
+    background-color: #a4a7af;
+    padding: 10px;
+    transition: border-color 0.3s ease;
+    width: 500px;
+}
+
+.field-container input:hover,
+.field-container textarea:hover {
+    background-color: #ccc;
+}
+
+.contact-section h2 {
+    font-size: 30px;
+    text-align: left;
+    margin-left: 5%;
+    color: #fff; /* White text for contrast */
+}
+
+button[type="submit"] {
+    background-color: #d6cfcf; /* Blue background */
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    margin: 3% 0;
+    max-width: 70px;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease; /* Smooth transition for button background */
+}
+
+button[type="submit"]:hover {
+    background-color: #ffffff; /* Darker blue on hover */
+}
+
+/* Adjustments for tablets */
+@media (max-width: 1024px) {
+    .contact-section {
+        margin: 2% 2%; /* Reduce horizontal margin */
+        padding: 20px 0; /* Reduce vertical padding */
+    }
+ 
+    .form-group {
+        max-width: 600px; /* Smaller maximum width */
+        margin-left: 15%; /* Adjust margin */
+    }
+ 
+    .field-container input,.field-container textarea {
+        width: 400px; /* Adjust input width */
+    }
+ 
+    .contact-section h2 {
+        font-size: 24px; /* Smaller font size */
+    }
+ 
+     button[type="submit"] {
+        max-width: 60px; /* Smaller submit button width */
+    }
+ }
+ 
+ /* Adjustments for mobile phones */
+ @media (max-width: 768px) {
+    .contact-section {
+        margin: 1% 2%; /* Further reduce horizontal margin */
+        padding: 10px 0; /* Further reduce vertical padding */
+    }
+ 
+    .form-group {
+        max-width: 95%; /* Even smaller maximum width */
+        margin-left: 5%; /* Adjust margin */
+    }
+ 
+    .field-container input,.field-container textarea {
+        width: 350px; /* Adjust input width for smaller screens */
+    }
+ 
+    .contact-section h2 {
+        font-size: 20px; /* Smaller font size for better readability */
+    }
+ 
+     button[type="submit"] {
+        max-width: 50px; /* Smaller submit button width */
+    }
+ }
+ 
+ /* Adjustments for very small screens */
+ @media (max-width: 480px) {
+    .contact-section {
+        margin: 5% 5%; /* Minimal horizontal margin */
+        padding: 5px 0; /* Very minimal vertical padding */
+    }
+ 
+    .form-group {
+        margin-top: 10%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 7%;
+        padding: 20px 30px;
+        max-width: 100%; /* Very small maximum width */
+        width: 70%;
+        align-items: center; /* Adjust margin */
+        justify-content: center;
+    }
+
+    .field-container label{
+        font-size: 16px;
+    }
+ 
+    .field-container input,.field-container textarea {
+        width: 130px; /* Adjust input width for extra small screens */
+    }
+ 
+    .contact-section h2 {
+        font-size: 24px; /* Smallest font size for very small screens */
+        text-align: center;
+        margin-left: 0;
+    }
+ 
+     button[type="submit"] {
+        max-width: 50px; /* Extra small submit button width */
+    }
+
+     .locate-us{
+        width: 200px;
+        margin-left: 20%;
+    }
+ }
+ @media (max-width: 768px) {
+    .contact-section {
+        margin: 5% 5%; /* Minimal horizontal margin */
+        padding: 5px 0; /* Very minimal vertical padding */
+    }
+ 
+    .form-group {
+        margin-top: 10%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 12%;
+        padding: 20px 30px;
+        max-width: 100%; /* Very small maximum width */
+        width: 70%;
+        align-items: center; /* Adjust margin */
+        justify-content: center;
+    }
+
+    .field-container label{
+        font-size: 24px;
+    }
+ 
+    .field-container input,.field-container textarea {
+        width: 250px; /* Adjust input width for extra small screens */
+    }
+ 
+    .contact-section h2 {
+        margin-top: 7%;
+        font-size: 30px; /* Smallest font size for very small screens */
+        text-align: center;
+        margin-left: 0;
+    }
+ 
+     button[type="submit"] {
+        max-width: 80px; /* Extra small submit button width */
+    }
+
+     .locate-us{
+        width: 250px;
+        margin-left: 33%;
+    }
+ }
+ 

@@ -1,6 +1,5 @@
 import './App.css';
 import { Navbar, Overlay, Home, About, Services, Products, ContactUs } from './components';
-import LazyLoadSection from './components/LazyLoadSection';
 
 
 function App() {
@@ -9,9 +8,7 @@ function App() {
       <Overlay />
       <Navbar />
       <Home />
-      <LazyLoadSection>
-        <About />
-      </LazyLoadSection>
+      <About />
       <Services />
       <Products />
       <ContactUs />

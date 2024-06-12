@@ -3,6 +3,7 @@ body {
   background-color: #1e2026;
   overflow-x: hidden;
   font-family: "futura_m";
+  max-width: 100%;
 }
 
 /* @keyframes App-logo-spin {

@@ -1,6 +1,27 @@
 .heading{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.heading.loaded {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+.gallery{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.gallery.loaded {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+.heading{
     color: white;
-    
 }
 
 .heading h1{
@@ -69,4 +90,112 @@
 
 .gallery2 img{
     padding-left: 20px;
+}
+
+@media (max-width: 1024px) {
+    .heading h1 {
+        font-size: 35px;
+    }
+    
+    .heading .span2 {
+        width: 300px;
+        line-height: 130px;
+        margin-left: 0;
+    }
+
+    .heading .span1 {
+        margin-left: 0;
+    }
+
+    .heading .span3 {
+        margin-left: 0;
+    }
+
+    .gallery {
+        height: auto;
+    }
+
+    .gallery1 p, .gallery2 p {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .heading h1 {
+        font-size: 30px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .heading .span1{
+        margin-left: -52%;
+    }
+
+    .heading .span2 {
+        width: 250px;
+        line-height: 100px;
+        margin-left: -8%;
+    }
+
+    .heading .span3{
+        margin-left: 32%;
+    }
+
+    .gallery1 p, .gallery2 p{
+        line-height: 25px;
+    }
+
+    .gallery1 img, .gallery2 img {
+        padding: 0;
+        margin: 20px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery{
+        height: 135vh;
+    }
+
+    .heading h1 {
+        font-size: 25px;
+    }
+
+    .heading .span2 {
+        width: 200px;
+        line-height: 80px;
+    }
+
+    .heading .span3 {
+        margin-left: 20%;
+    }
+
+    .heading .span1 {
+        margin-left: -40%;
+    }
+
+    .gallery1 {
+        display: flex; /* Use flexbox */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Center text */
+        margin: 0 10%;
+    }
+
+    .gallery2 {
+        display: flex; /* Use flexbox */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Center text */
+        margin: 0 10%;
+    }
+
+    .gallery img{
+        width: 250px;
+    }
+
+    .gallery1 p, .gallery2 p {
+        font-size: 16px;
+        margin: 0;
+    }
 }

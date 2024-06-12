@@ -5,4 +5,3 @@ export { default as About} from './about/About';
 export { default as Services} from './services/Services';
 export { default as Products} from './products/Products';
 export { default as ContactUs} from './contact/ContactUs';
-export { default as LazyLoadSection} from './LazyLoadSection';

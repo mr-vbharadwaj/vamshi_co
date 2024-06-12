@@ -1,58 +1,109 @@
+/* src/components/About.css */
 .about_section {
     background-color: black;
     margin: 0 5%;
     color: white;
     padding: 30px 0;
     height: 130vh;
-}
-
-.about_heading h2 {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+  
+  .about_section.loaded {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .about_heading h2 {
     text-align: left;
     font-size: 30px;
     margin-left: 5%;
-}
-
-.about_section p {
+  }
+  
+  .about_section p {
     font-size: 20px;
     margin-left: -4%;
-}
-
-.meet_section {
+  }
+  
+  .meet_section {
     background-color: #282c34;
     padding: 10px 40px;
     margin: 5% 10%;
-}
-
-.meet_section h3{
+  }
+  
+  .meet_section h3 {
     font-size: 24px;
-}
-
-.info {
+  }
+  
+  .info {
     display: flex;
     flex-wrap: wrap; /* Allows items to wrap onto multiple lines */
     justify-content: center; /* Centers items horizontally */
     gap: 20px; /* Adds some spacing between items */
-}
-
-.individual_info {
+  }
+  
+  .individual_info {
     flex-basis: calc(33.333% - 40px); /* Each item takes approximately one-third of the container width minus the padding around images */
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-}
-
-.info img {
+  }
+  
+  .info img {
     padding: 10px 50px;
-}
-
-.info p {
+  }
+  
+  .info p {
     font-size: 18px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-   .individual_info {
-        flex-basis: calc(50% - 40px); /* On smaller screens, items take half the container width minus the padding */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .individual_info {
+      flex-basis: calc(50% - 40px); /* On smaller screens, items take half the container width minus the padding */
     }
-}
+
+    .about_section{
+      height: 165vh;
+    }
+
+    .about_heading h2{      
+      text-align: center;
+      margin-left: 0;
+    }
+
+    .about_heading p{
+      font-size: 16px;
+      margin: 0 2%;
+    }
+
+    .individual_info p{
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 480px) {
+    .individual_info {
+      flex-basis: calc(50% - 40px); /* On smaller screens, items take half the container width minus the padding */
+    }
+
+    .about_section{
+      height: 250vh;
+    }
+
+    .about_heading h2{      
+      text-align: center;
+      margin-left: 0;
+    }
+
+    .about_heading p{
+      font-size: 16px;
+      margin: 0 2%;
+    }
+
+    .individual_info p{
+      font-size: 16px;
+    }
+  }
+  

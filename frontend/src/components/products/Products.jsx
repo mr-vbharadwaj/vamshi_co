@@ -1,11 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import { useInView } from 'react-intersection-observer';
 import './Products.css'
-import {som} from '../../assets/img/imports';
+import { som } from '../../assets/img/imports';
 
 const Products = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    if (inView) {
+      const timer = setTimeout(() => {
+        setIsLoaded(true);
+      }, 500); // Delay to create a slow loading effect
+      return () => clearTimeout(timer);
+    }
+  }, [inView]);
+
   return (
-    <section id='products'>
-      <div className='products_section'>
+    <section id='products' ref={ref}>
+      <div className={`products_section ${isLoaded ? 'loaded' : ''}`}>
         <h2>Products line</h2>
         <div>
           <img src={som} alt="SOM_chip_gif" />

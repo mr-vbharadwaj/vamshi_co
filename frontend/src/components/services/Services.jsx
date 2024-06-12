@@ -1,11 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import { useInView } from 'react-intersection-observer';
 import './Services.css'
 
 const Services = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    if (inView) {
+      const timer = setTimeout(() => {
+        setIsLoaded(true);
+      }, 500); // Delay to create a slow loading effect
+      return () => clearTimeout(timer);
+    }
+  }, [inView]);
+
   return (
-    <section id='services'>
-      <div className='services_section'>
-        <div className='heading'>
+    <section id='services' ref={ref}>
+      <div className={`services_section ${isLoaded ? 'loaded' : ''}`}>
+        <div className='services_heading'>
           <h2>Our Services</h2>
         </div>
         <div className='services_info'>

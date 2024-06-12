@@ -3,8 +3,11 @@
   justify-content: center;
   align-items: center;
   padding: 2rem 6rem;
-  width: 100%;
   background-color: black;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .navbar-links{
@@ -17,7 +20,7 @@
 .navbar-logo{
   display: flex;
   align-items: center;
-  margin-left: -180px;
+  margin-left: -10%;
 }
 
 .navbar-links-logo{
@@ -63,21 +66,111 @@
 }
 
 .navbar-menu_container{
+  z-index: 1;
+  color: white;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   flex-direction: column;
   text-align: end;
-  padding: 2rem;
+  padding: 0 2rem;
   position: absolute;
   top: 40px;
   right: 0;
-  margin-top: 1rem;
-  min-width: 200px;
+  min-width: 70px;
   border-radius: 5px;
   box-shadow: 0 0 5 rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 1);
 }
 
 .navbar-menu_container p{
   margin: 1rem 0;
+}
+
+.navbar-menu_container a{
+  color: white;
+}
+
+
+.go-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #1e2026;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 1000; 
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.go-to-top:hover {
+  opacity: 1;
+  color: black;
+  background-color: #ccc;
+}
+
+
+@media screen and (max-width: 1050px) {
+  .navbar {
+    padding: 1rem 2rem;
+  }
+
+  .navbar-links-container {
+    display: flex;
+  }
+
+  .navbar-menu {
+    display: none;
+  }
+
+  .navbar-logo {
+    margin-left: 0;
+  }
+
+  .navbar-logo h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 1rem 2rem;
+  }
+
+  .navbar-links-container {
+    display: none;
+  }
+
+  .navbar-menu {
+    display: flex;
+  }
+
+  .navbar-logo {
+    margin-left: -60%;
+  }
+
+  .navbar-logo h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .navbar-logo img {
+    width: 60px;
+    margin-left: 10%;
+  }
+
+  .navbar-logo h2 {
+    font-size: 1rem;
+  }
 }

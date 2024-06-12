@@ -1,11 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useInView } from 'react-intersection-observer';
 import './About.css';
 import { Vamshi, Jackson, Vijay, Sivan, Vyshak } from '../../assets/img/imports';
 
 const About = () => {
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+        threshold: 0.1,
+      });
+      const [isLoaded, setIsLoaded] = useState(false);
+    
+      useEffect(() => {
+        if (inView) {
+          const timer = setTimeout(() => {
+            setIsLoaded(true);
+          }, 500); // Delay to create a slow loading effect
+          return () => clearTimeout(timer);
+        }
+      }, [inView]);
+
   return (
-    <section id='about'>
-        <div className='about_section'>
+    <section id='about' ref={ref}>
+        <div className={`about_section ${isLoaded ? 'loaded' : ''}`}>
             <div className='about_heading'>
                 <h2>About Us</h2>
                 <p>Advanced System-on-Modules integrating AI-enhanced 
